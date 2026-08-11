@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Helios Talent Intelligence prototype — strategic workforce planning, internal talent marketplace and AI career copilot." />
+  <title>Helios Talent Intelligence</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">H</div>
+        <div>
+          <div class="brand-name">HELIOS</div>
+          <div class="brand-sub">Talent Intelligence</div>
+        </div>
+      </div>
+
+      <nav class="nav-list" aria-label="Primary navigation">
+        <button class="nav-item active" data-view="overview">
+          <span class="nav-icon">◉</span><span>Talent Overview</span>
+        </button>
+        <button class="nav-item" data-view="workforce">
+          <span class="nav-icon">▦</span><span>Workforce Planning</span>
+        </button>
+        <button class="nav-item" data-view="marketplace">
+          <span class="nav-icon">◇</span><span>Talent Marketplace</span>
+        </button>
+        <button class="nav-item" data-view="copilot">
+          <span class="nav-icon">✦</span><span>Career Copilot</span>
+        </button>
+        <button class="nav-item" data-view="intelligence">
+          <span class="nav-icon">◎</span><span>Talent Intelligence</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="ai-badge">
+          <span class="pulse-dot"></span>
+          <div>
+            <strong>AI Prototype Engine</strong>
+            <small>Explainable • Human-governed</small>
+          </div>
+        </div>
+        <div class="profile-mini">
+          <div class="avatar small">PS</div>
+          <div>
+            <strong>Pankita</strong>
+            <small>HR Transformation</small>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button id="menuToggle" class="icon-btn mobile-only" aria-label="Toggle menu">☰</button>
+          <div>
+            <p class="eyebrow" id="viewEyebrow">Enterprise Talent View</p>
+            <h1 id="viewTitle">Talent Overview</h1>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <button id="demoReset" class="ghost-btn">Reset demo</button>
+          <button id="scenarioPulse" class="primary-btn"><span>✦</span> Run insight pulse</button>
+        </div>
+      </header>
+
+      <section id="overview" class="view active-view"></section>
+      <section id="workforce" class="view"></section>
+      <section id="marketplace" class="view"></section>
+      <section id="copilot" class="view"></section>
+      <section id="intelligence" class="view"></section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <div id="modalBackdrop" class="modal-backdrop hidden" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
